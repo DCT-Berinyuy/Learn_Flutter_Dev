@@ -48,27 +48,28 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          margin: EdgeInsets.all(50.0),
-          padding: EdgeInsets.all(50.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25.0),
-            color: Colors.deepPurple,
-          ),
-            child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          padding: EdgeInsets.all(50.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25.0),
-            color: Colors.blue,
-          ),
-            child: Text(
-              'Hello, Fluter!', 
-              style: TextStyle(color: Colors.white),
+          color: Colors.blue,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 100.0,
+                height: 100.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25.0),
+                  color: Colors.deepPurple,
+                ),
               ),
-        )
+              Container(
+                width: 100.0,
+                height: 100.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25.0),
+                  color: Colors.deepPurple,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
