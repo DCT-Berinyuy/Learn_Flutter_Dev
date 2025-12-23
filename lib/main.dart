@@ -12,14 +12,17 @@ Map<String, dynamic> myMap = {'Sentence': 'Dart', 'Sentence2': 777};
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple, brightness: Brightness.dark,),
+        colorScheme: .fromSeed(
+          seedColor: Colors.deepPurple,
+          brightness: Brightness.dark,
+        ),
       ),
       home: const MyHomePage(title: 'Learn Flutter Dev'),
     );
@@ -36,7 +39,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,10 +47,30 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text('Hello, Fluter!',
-        style: TextStyle(color: Colors.amber),
+        child: Container(
+          height: double.infinity,
+          width: double.infinity,
+          margin: EdgeInsets.all(50.0),
+          padding: EdgeInsets.all(50.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25.0),
+            color: Colors.deepPurple,
+          ),
+            child: Container(
+          height: double.infinity,
+          width: double.infinity,
+          padding: EdgeInsets.all(50.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25.0),
+            color: Colors.blue,
+          ),
+            child: Text(
+              'Hello, Fluter!', 
+              style: TextStyle(color: Colors.white),
+              ),
+        )
         ),
-      )
+      ),
     );
   }
 }
