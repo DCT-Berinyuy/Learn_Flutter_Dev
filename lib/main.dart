@@ -23,41 +23,6 @@ class MyApp extends StatelessWidget {
           title: const Text('DeepCodeThinking'),
           centerTitle: true,
         ),
-        drawer: SafeArea(
-          child: Drawer(
-            child: Column(
-              children: [
-                ListTile(
-                  title: Text('Hello Drawer'),
-                  onTap: () {
-                    // Action when drawer item is tapped
-                    print('Drawer Item Tapped');
-                  },
-                ),
-              ],
-            ),
-          ),
-        ),
-        floatingActionButton: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FloatingActionButton(
-              onPressed: () {
-                // Action when button is pressed
-                print('Floating Action Button Pressed');
-              },
-              child: const Icon(Icons.add),
-            ),
-            SizedBox(height: 16), // Spacing between buttons
-             FloatingActionButton(
-              onPressed: () {
-                // Action when button is pressed
-                print('Floating Action Button Pressed');
-              },
-              child: const Icon(Icons.add),
-            ),
-          ],
-        ),
         bottomNavigationBar: NavigationBar(
           destinations: [
           NavigationDestination(
@@ -67,11 +32,8 @@ class MyApp extends StatelessWidget {
           icon: Icon(Icons.person), 
           label: 'Profile'),
           ],
-          onDestinationSelected: (int index) {
-            // Handle navigation logic here
-            print('Hello $index');
-          },
-          selectedIndex: 1,
+          onDestinationSelected: (int index) {},
+          selectedIndex: 0,
           ),
       ),
     );
