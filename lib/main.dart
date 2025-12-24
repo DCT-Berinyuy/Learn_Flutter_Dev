@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: const MyHomePage(title: 'Learn Flutter Dev'),
+      home: const MyHomePage(title: 'Flutter Dev'),
     );
   }
 }
@@ -49,8 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Container(
           color: Colors.blue,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Container(
                 width: 100.0,
@@ -59,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   borderRadius: BorderRadius.circular(25.0),
                   color: Colors.deepPurple,
                 ),
+                child: Center(child: Text("data")),
               ),
               Container(
                 width: 100.0,

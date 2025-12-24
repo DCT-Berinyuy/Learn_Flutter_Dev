@@ -9,3 +9,10 @@
 # Chapter 2: Basic Layout
 ### Container
 - Its just like an empty box that you can fill it with anything
+### COlumn
+- Creates a vertical array of children
+### Row
+- Creates a horizontal array of children
+## Note: mainAxisAlignment is the mainAxis while the crossAxisAlignment is the inverse.
+### Center
+- 
