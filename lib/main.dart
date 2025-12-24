@@ -44,35 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Container(
-          color: Colors.blue,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: 100.0,
-                height: 100.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  color: Colors.deepPurple,
-                ),
-                child: Center(child: Text("data")),
-              ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  color: Colors.deepPurple,
-                ),
-              ),
-            ],
+        title: Center(
+          child: Text(widget.title),
           ),
-        ),
       ),
+      body: Image.asset('assets/images/bg.jpg',
+      height: double.infinity,
+      fit: BoxFit.cover,
+      )
     );
   }
 }
