@@ -15,4 +15,20 @@
 - Creates a horizontal array of children
 ## Note: mainAxisAlignment is the mainAxis while the crossAxisAlignment is the inverse.
 ### Center
-- 
+- Creates a widget that centers its child.
+### Stack
+- Creates a stack layout widget. By default, the non-positioned children of the stack are aligned by their top left corners.
+### Padding
+- Creates a widget that insets its child. Padding is only for padding onlike the container widget
+### SizeBox
+-  Creates a fixed size box. The [width] and [height] parameters can be null to indicate that the size of the box should not be constrained in the corresponding dimension. Note: the SizeBox is like a container but only for the height and width. This makes it less expensive for Flutter.
+### Icon
+- Creates an icon.
+### ListTile
+- Creates a list tile.
+### print
+- Prints an object to the console.
+### Wrap
+- Creates a wrap layout. By default, the wrap layout is horizontal and both the children and the runs are aligned to the start.
+
+# Chapter 2: Master Layout

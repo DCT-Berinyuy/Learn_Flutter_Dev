@@ -47,15 +47,17 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Center(child: Text(widget.title)),
       ),
-      body: Stack(
+      body: Wrap(
         children: [
-          Image.asset('assets/images/bg.jpg', fit: BoxFit.cover, height: 300),
-          SizedBox(
-            height: 300,
-            child: Center(child: Text('Mr.DCT')),
-            ),
+          Text('DeepCodeThinking, DeepCodeThinking, DeepCodeThinking, DeepCodeThinking'),
+          Icon(Icons.flutter_dash),
+          Text('Flutter Dev'),
+          Text('DeepCodeThinking'),
+          Icon(Icons.flutter_dash),
+          Text('Flutter Dev'),
+          Text('DeepCodeThinking'),
         ],
-      ),
+      )
     );
   }
 }
