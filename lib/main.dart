@@ -49,13 +49,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Wrap(
         children: [
-          Text('DeepCodeThinking, DeepCodeThinking, DeepCodeThinking, DeepCodeThinking'),
+          Text('DeepCodeThinking, DeepCodeThinking, DeepCodeThinking, DeepCodeThinking, DeepCodeThinking'),
           Icon(Icons.flutter_dash),
           Text('Flutter Dev'),
           Text('DeepCodeThinking'),
           Icon(Icons.flutter_dash),
           Text('Flutter Dev'),
           Text('DeepCodeThinking'),
+          Text('This is the power of wrap'),
         ],
       )
     );
