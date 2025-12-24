@@ -32,3 +32,6 @@
 - Creates a wrap layout. By default, the wrap layout is horizontal and both the children and the runs are aligned to the start.
 
 # Chapter 2: Master Layout
+### MaterialApp & Scafold
+_StateLessWidget means that the screen will not change while the StateFullWidget means the screen can change.
+- MaterialApp is like the theme of the app while the Scafold is like the skeleton of the app.
