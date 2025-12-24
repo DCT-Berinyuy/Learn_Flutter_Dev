@@ -4,6 +4,7 @@ void main() {
   runApp(const MyApp());
 }
 
+//!These are data types in dart
 String name = 'Mr.DCT';
 int number = 7;
 double real = 17.0;
@@ -44,14 +45,17 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Center(
-          child: Text(widget.title),
-          ),
+        title: Center(child: Text(widget.title)),
       ),
-      body: Image.asset('assets/images/bg.jpg',
-      height: double.infinity,
-      fit: BoxFit.cover,
-      )
+      body: Stack(
+        children: [
+          Image.asset('assets/images/bg.jpg', fit: BoxFit.cover, height: 300),
+          SizedBox(
+            height: 300,
+            child: Center(child: Text('Mr.DCT')),
+            ),
+        ],
+      ),
     );
   }
 }
