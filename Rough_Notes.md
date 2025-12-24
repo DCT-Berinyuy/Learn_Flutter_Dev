@@ -35,3 +35,11 @@
 ### MaterialApp & Scafold
 _StateLessWidget means that the screen will not change while the StateFullWidget means the screen can change.
 - MaterialApp is like the theme of the app while the Scafold is like the skeleton of the app.
+### AppBar
+- Creates a Material Design app bar.
+### NavigationBar
+- Creates a Material 3 Navigation Bar component. The value of [destinations] must be a list of two or more [NavigationDestination] values.
+### FloatingActionButton
+- A button displayed floating above [body], in the bottom right corner.
+### Drawer
+- Creates a Material Design drawer.
