@@ -7,6 +7,8 @@ void main() {
 //* Material App
 //* Scaffold
 
+String? title = 'DeepCodeThinking';
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -20,13 +22,13 @@ class MyApp extends StatelessWidget {
       ),),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('DeepCodeThinking'),
+          title: Text(title!),
           centerTitle: true,
         ),
         bottomNavigationBar: NavigationBar(
           destinations: [
           NavigationDestination(
-          icon: Icon(Icons.home), 
+          icon: Icon(Icons.home),
           label: 'Home'),
           NavigationDestination(
           icon: Icon(Icons.person), 

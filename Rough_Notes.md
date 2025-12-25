@@ -31,7 +31,7 @@
 ### Wrap
 - Creates a wrap layout. By default, the wrap layout is horizontal and both the children and the runs are aligned to the start.
 
-# Chapter 2: Master Layout
+# Chapter 3: Master Layout
 ### MaterialApp & Scafold
 _StateLessWidget means that the screen will not change while the StateFullWidget means the screen can change.
 - MaterialApp is like the theme of the app while the Scafold is like the skeleton of the app.
@@ -43,3 +43,9 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 - A button displayed floating above [body], in the bottom right corner.
 ### Drawer
 - Creates a Material Design drawer.
+### SafeArea
+- Creates a widget that avoids operating system interfaces.
+
+# Chapter 4: Fix Bugs
+### Type 1: Hover the statement to display more details about the error.
+### Type 2: Displays red screen on the running device. Go to debug console.
