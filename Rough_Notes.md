@@ -48,4 +48,12 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 
 # Chapter 4: Fix Bugs
 ### Type 1: Hover the statement to display more details about the error.
-### Type 2: Displays red screen on the running device. Go to debug console.
+### Type 2: Displays red screen on the running device. Go to debug console and follow bug links.
+
+# Chapter 5: States
+### StateFull
+- Its a way to tell flutter the screen can refresh.
+### Stateless
+- Can't refresh the screen.
+### SelectedIndex
+- Determines which one of the [destinations] is currently selected.
