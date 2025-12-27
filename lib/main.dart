@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/widgets/navbar_widget.dart';
+import 'package:flutter_app/views/widget_tree.dart';
 
 //!TO Do List
 //* Material App
@@ -28,10 +28,7 @@ class _MyAppState extends State<MyApp> {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(
-        appBar: AppBar(centerTitle: true, title: Text('DeepCodeThinking')),
-        bottomNavigationBar: NavbarWidget()
-      ),
+      home: WidgetTree()
     );
   }
 }
