@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/notifiers.dart';
 import 'package:flutter_app/views/pages/home_page.dart';
 import 'package:flutter_app/views/pages/profile_page.dart'; 
 import 'package:flutter_app/widgets/navbar_widget.dart';
@@ -12,9 +13,13 @@ class WidgetTree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(          
         appBar: AppBar(centerTitle: true, title: Text('DeepCodeThinking')),
-        body: pages.elementAt(1),
+        body: ValueListenableBuilder(
+          valueListenable: selectedPageNotifier,
+          builder: (context, selectedPage, child) {
+          return pages.elementAt(selectedPage);
+        }),
         bottomNavigationBar: NavbarWidget()
       );
   }
