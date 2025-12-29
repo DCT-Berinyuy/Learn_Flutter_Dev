@@ -69,4 +69,6 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 - Creates a Material Design checkbox.
 ### CheckBoxListTile
 - Creates a combination of a list tile and a checkbox.
+### Switch
+- Creates a Material Design switch.
 
