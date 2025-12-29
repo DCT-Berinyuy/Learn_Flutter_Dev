@@ -73,4 +73,12 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 - Creates a Material Design switch.
 ### .adaptive
 - Creates an adaptive [Checkbox] based on whether the target platform is iOS or macOS, following Material design's Cross-platform guidelines.
+### Slider
+-  Creates an adaptive [Slider] based on the target platform, following Material design's Cross-platform guidelines.
+### SingleChildScrollView
+- Creates a box in which a single widget can be scrolled.
+### GestureDetector
+- Creates a widget that detects gestures.
+### InkWell
+- 
 
