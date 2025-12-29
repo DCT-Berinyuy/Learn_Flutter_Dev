@@ -65,11 +65,14 @@ class _ProfilePageState extends State<ProfilePage> {
                 });
               },
             ),
-            Slider.adaptive(value: sliderValue, onChanged: (double value) {
-              setState(() {
-                sliderValue = value;
-              });
-            }),
+            Slider.adaptive(
+              value: sliderValue,
+              onChanged: (double value) {
+                setState(() {
+                  sliderValue = value;
+                });
+              },
+            ),
             Text('Slider Value: ${sliderValue.toStringAsFixed(2)}'),
             InkWell(
               splashColor: Colors.purpleAccent,
@@ -77,11 +80,32 @@ class _ProfilePageState extends State<ProfilePage> {
                 print('Image Tapped');
               },
               child: Container(
-                height: 200,
+                height: 50,
                 width: double.infinity,
                 color: Colors.white12,
-              )
+              ),
             ),
+            ElevatedButton(
+              onPressed: () {}, 
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                foregroundColor: Colors.white,
+              ),
+              child: Text('Elevated Button'),),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Normal Elevated Button')),
+            FilledButton(
+              onPressed: () {},
+              child: Text('Filled Button')),
+            TextButton(
+              onPressed: () {},
+              child: Text('Text Button')),
+            OutlinedButton(
+              onPressed: () {},
+              child: Text('Outlined Button')),
+              CloseButton(),
+              BackButton(),
           ],
         ),
       ),

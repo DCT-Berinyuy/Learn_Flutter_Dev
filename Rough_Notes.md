@@ -80,5 +80,7 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 ### GestureDetector
 - Creates a widget that detects gestures.
 ### InkWell
-- 
+- Creates an ink well.
+### Buttons
+- There are `several` types of buttons in Flutter.
 
