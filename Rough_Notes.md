@@ -57,3 +57,7 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 - Can't refresh the screen.
 ### SelectedIndex
 - Determines which one of the [destinations] is currently selected.
+### ValueNotifier
+- Hold data that can be listened to for changes
+### ValueListenableBuilder
+- Listen to changes in ValueNotifier and rebuild widgets(Don't need the setState method)

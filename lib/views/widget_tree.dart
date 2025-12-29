@@ -14,7 +14,23 @@ class WidgetTree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(          
-        appBar: AppBar(centerTitle: true, title: Text('DeepCodeThinking')),
+        appBar: AppBar(centerTitle: true, title: Text('DeepCodeThinking'),
+        actions: [
+          IconButton(
+          onPressed: () {
+            themeNotifier.value = !themeNotifier.value;
+          },
+          icon: ValueListenableBuilder(
+            valueListenable: themeNotifier,
+            builder: (BuildContext context, dynamic theme, Widget? child) {
+              return  Icon(
+                theme ? Icons.light_mode : Icons.dark_mode,
+              );
+            },
+          ),
+        ),
+      ],
+   ),
         body: ValueListenableBuilder(
           valueListenable: selectedPageNotifier,
           builder: (context, selectedPage, child) {
