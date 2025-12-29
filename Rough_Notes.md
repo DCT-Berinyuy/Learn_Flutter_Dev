@@ -61,3 +61,12 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 - Hold data that can be listened to for changes
 ### ValueListenableBuilder
 - Listen to changes in ValueNotifier and rebuild widgets(Don't need the setState method)
+
+# Chapter 6: User Input
+### Text Field
+- Creates a Material Design text field.
+### CheckBox
+- Creates a Material Design checkbox.
+### CheckBoxListTile
+- Creates a combination of a list tile and a checkbox.
+
