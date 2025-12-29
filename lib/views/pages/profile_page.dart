@@ -11,6 +11,7 @@ class _ProfilePageState extends State<ProfilePage> {
   TextEditingController controller = TextEditingController();
   bool? isChecked = false;
   bool isSwitched = false;
+  double sliderValue = 0.0;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -27,7 +28,7 @@ class _ProfilePageState extends State<ProfilePage> {
             onEditingComplete: () => setState(() {}),
           ),
           Text(controller.text),
-          Checkbox(
+          Checkbox.adaptive(
             tristate: true,
             value: isChecked,
             onChanged: (bool? value) {
@@ -36,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
               });
             },
           ),
-          CheckboxListTile(
+          CheckboxListTile.adaptive(
             tristate: true,
             title: Text('Accept Terms'),
             value: isChecked,
@@ -46,7 +47,7 @@ class _ProfilePageState extends State<ProfilePage> {
               });
             },
           ),
-          Switch(
+          Switch.adaptive(
             value: isSwitched,
             onChanged: (bool value) {
               setState(() {
@@ -54,7 +55,7 @@ class _ProfilePageState extends State<ProfilePage> {
               });
             },
           ),
-          SwitchListTile(
+          SwitchListTile.adaptive(
             title: Text('Enable Notifications'),
             value: isSwitched,
             onChanged: (bool value) {
@@ -63,6 +64,12 @@ class _ProfilePageState extends State<ProfilePage> {
               });
             },
           ),
+          Slider(value: sliderValue, onChanged: (double value) {
+            setState(() {
+              sliderValue = value;
+            });
+          }),
+          Text('Slider Value: ${sliderValue.toStringAsFixed(2)}'),
         ],
       ),
     );

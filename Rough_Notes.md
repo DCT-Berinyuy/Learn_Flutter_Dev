@@ -71,4 +71,6 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 - Creates a combination of a list tile and a checkbox.
 ### Switch
 - Creates a Material Design switch.
+### .adaptive
+- Creates an adaptive [Checkbox] based on whether the target platform is iOS or macOS, following Material design's Cross-platform guidelines.
 
