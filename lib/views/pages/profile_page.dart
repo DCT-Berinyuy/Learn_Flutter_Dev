@@ -12,6 +12,7 @@ class _ProfilePageState extends State<ProfilePage> {
   bool? isChecked = false;
   bool isSwitched = false;
   double sliderValue = 0.0;
+  String? dropdownValue = 'Element 1';
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -19,6 +20,24 @@ class _ProfilePageState extends State<ProfilePage> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            DropdownButton(
+              value: dropdownValue,
+              items: [
+                DropdownMenuItem(
+                  value: 'Element 1',
+                child: Text('Element 1')),
+                DropdownMenuItem(
+                  value: 'Element 2',
+                  child: Text('Element 2')),
+                DropdownMenuItem(
+                  value: 'Element 3',
+                  child: Text('Element 3')),],
+              onChanged: (String? value) {
+                setState(() {
+                  dropdownValue = value;
+                });
+              },
+            ),
             TextField(
               controller: controller,
               decoration: InputDecoration(
@@ -86,26 +105,22 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             ElevatedButton(
-              onPressed: () {}, 
+              onPressed: () {},
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.purple,
                 foregroundColor: Colors.white,
               ),
-              child: Text('Elevated Button'),),
+              child: Text('Elevated Button'),
+            ),
             ElevatedButton(
               onPressed: () {},
-              child: Text('Normal Elevated Button')),
-            FilledButton(
-              onPressed: () {},
-              child: Text('Filled Button')),
-            TextButton(
-              onPressed: () {},
-              child: Text('Text Button')),
-            OutlinedButton(
-              onPressed: () {},
-              child: Text('Outlined Button')),
-              CloseButton(),
-              BackButton(),
+              child: Text('Normal Elevated Button'),
+            ),
+            FilledButton(onPressed: () {}, child: Text('Filled Button')),
+            TextButton(onPressed: () {}, child: Text('Text Button')),
+            OutlinedButton(onPressed: () {}, child: Text('Outlined Button')),
+            CloseButton(),
+            BackButton(),
           ],
         ),
       ),
