@@ -84,3 +84,6 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 ### Buttons
 - There are `several` types of buttons in Flutter.
 
+# Chapter 7: Navigation (Routing)
+## Push
+- Push the given route onto the navigator that most tightly encloses the given context.
