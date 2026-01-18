@@ -96,7 +96,7 @@ class _ProfilePageState extends State<ProfilePage> {
             InkWell(
               splashColor: Colors.purpleAccent,
               onTap: () {
-                print('Image Tapped');
+                debugPrint('Image Tapped');
               },
               child: Container(
                 height: 50,
