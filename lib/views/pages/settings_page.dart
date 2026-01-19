@@ -110,6 +110,7 @@ class _SettingsPage extends State<SettingsPage> {
                 height: 150,
                 width: double.infinity,
                 color: Colors.white12,
+                child: Center(child: Text('InkWell Widget - Tap Me')),
               ),
             ),
             ElevatedButton(
