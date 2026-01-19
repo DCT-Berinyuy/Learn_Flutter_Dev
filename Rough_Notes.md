@@ -87,3 +87,7 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 # Chapter 7: Navigation (Routing)
 ## Push
 - Push the given route onto the navigator that most tightly encloses the given context.
+
+# Chater 8: Clean UI Widgets
+## ClipRRect
+- Creates a rounded-rectangular clip.

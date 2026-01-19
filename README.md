@@ -1,8 +1,8 @@
 # flutter_app
 
-A new Flutter project.
+A journey on learning MobileApp Dev Android | iOS
 
-## ScreenShots
+## ScreenShots Preview
 ![Settings Page](screenshot2.png)
 ![Home Page](screenshot1.png)
 
