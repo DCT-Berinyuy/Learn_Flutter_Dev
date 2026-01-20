@@ -92,4 +92,10 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 ## ClipRRect
 - Creates a rounded-rectangular clip.
 ## Hero
+- Creates a hero
+## SnackBar
+- Creates a snack bar
+## Alert
+- Creates an alert dialog
+## Divider
 - 
