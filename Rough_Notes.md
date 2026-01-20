@@ -98,4 +98,13 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 ## Alert
 - Creates an alert dialog
 ## Divider
-- 
+- Creates a Material Design divider.
+## Card
+- Creates a Material Design card.
+
+# Chapter 9: Packages
+## Lotties
+- A widget to display a loaded [LottieComposition] animations
+## FittedBox
+- Creates a widget that scales and positions its child within itself according to [fit]
+
