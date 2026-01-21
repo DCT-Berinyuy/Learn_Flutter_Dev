@@ -107,4 +107,5 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 - A widget to display a loaded [LottieComposition] animations
 ## FittedBox
 - Creates a widget that scales and positions its child within itself according to [fit]
-
+## Dispose
+- The dispose is part of the override that you can use inside statefull widget only take note.
