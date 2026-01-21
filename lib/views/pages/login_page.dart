@@ -12,6 +12,10 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController controllerEmail = TextEditingController();
   TextEditingController controllerPassword = TextEditingController();
+
+  String conFirmedEmail = 'dct@gmail.com';
+  String conFirmedPassword = 'dct1234';
+
   @override
   void dispose() {
     // TODO: implement dispose
@@ -19,6 +23,7 @@ class _LoginPageState extends State<LoginPage> {
     controllerPassword.dispose();
     super.dispose();
   }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(child: Text("Login"))),
@@ -40,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                 setState(() {}); // Refresh the UI
               },
             ),
-             SizedBox(height: 10.0),
+            SizedBox(height: 10.0),
             TextField(
               controller: controllerPassword,
               decoration: InputDecoration(
@@ -54,18 +59,11 @@ class _LoginPageState extends State<LoginPage> {
               },
             ),
             SizedBox(height: 20.0),
-            FilledButton(
+            ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return WidgetTree();
-                    },
-                  ),
-                );
+                onLoginPressed();
               },
-              style: FilledButton.styleFrom(
+              style: ElevatedButton.styleFrom(
                 minimumSize: Size(double.infinity, 50),
               ),
               child: const Text("Login"),
@@ -74,5 +72,33 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  void onLoginPressed() {
+    String email = controllerEmail.text;
+    String password = controllerPassword.text;
+
+    if (email == conFirmedEmail && password == conFirmedPassword) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => WidgetTree()),
+      );
+    } else {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Login Failed'),
+          content: Text('Incorrect email or password. Please try again.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
   }
 }
