@@ -87,9 +87,10 @@ class _LoginPageState extends State<LoginPage> {
     String password = controllerPassword.text;
 
     if (email == conFirmedEmail && password == conFirmedPassword) {
-      Navigator.pushReplacement(
+      Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (context) => WidgetTree()),
+        (route) => false,
       );
     } else {
       showDialog(

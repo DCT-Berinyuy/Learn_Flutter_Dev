@@ -111,3 +111,6 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 - The dispose is part of the override that you can use inside statefull widget only take note.
 ## SingleChildScrollView 
 - Creates a box in which a single widget can be scrolled.
+## SharedPreferences
+- 
+Wraps NSUserDefaults (on iOS) and SharedPreferences (on Android), providing a persistent store for simple data.
