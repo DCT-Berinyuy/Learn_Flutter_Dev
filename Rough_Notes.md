@@ -118,3 +118,7 @@ Wraps NSUserDefaults (on iOS) and SharedPreferences (on Android), providing a pe
 - 
 Creates insets with symmetrical vertical and horizontal offsets. Eight pixel margin above and below, no horizontal margins:
 const EdgeInsets.symmetric(vertical: 8.0)
+## List.generat
+- Generates a list of values.
+
+Creates a list with [length] positions and fills it with values created by calling [generator] for each index in the range 0 .. length - 1 in increasing order.
