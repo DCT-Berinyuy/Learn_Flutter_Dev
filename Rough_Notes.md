@@ -114,3 +114,7 @@ _StateLessWidget means that the screen will not change while the StateFullWidget
 ## SharedPreferences
 - 
 Wraps NSUserDefaults (on iOS) and SharedPreferences (on Android), providing a persistent store for simple data.
+## EdgeInsets.symmetric
+- 
+Creates insets with symmetrical vertical and horizontal offsets. Eight pixel margin above and below, no horizontal margins:
+const EdgeInsets.symmetric(vertical: 8.0)

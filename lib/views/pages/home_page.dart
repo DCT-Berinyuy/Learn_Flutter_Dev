@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/constants.dart';
+import 'package:flutter_app/widgets/container_widget.dart';
 import 'package:flutter_app/widgets/hero_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,33 +7,43 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.all(20.0),
-    child: SingleChildScrollView(
-      child: Column(
-        children: [
-          HeroWidget(title: 'Mr.DCT',),
-          Padding(padding: EdgeInsets.symmetric(vertical: 20.0),
-          child: SizedBox(
-            width: double.infinity,
-            child: Card(
-              child: Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Basic Layout',
-                      style: KTextStyle.titleTeeText,
-                    ),
-                    Text('The description of this',
-                    style: KTextStyle.descriptionText),
-                  ],
-                ),
-              ),
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.0),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            HeroWidget(title: 'DCT Lab'),
+            ContainerWidget(
+              title: 'Basic Layout',
+              description: 'The description of the basic layout goes here.',
             ),
-          ),)
-        ],
+            ContainerWidget(
+              title: 'Basic Layout',
+              description: 'The description of the basic layout goes here.',
+            ),
+            ContainerWidget(
+              title: 'Basic Layout',
+              description: 'The description of the basic layout goes here.',
+            ),
+            ContainerWidget(
+              title: 'Basic Layout',
+              description: 'The description of the basic layout goes here.',
+            ),
+            ContainerWidget(
+              title: 'Basic Layout',
+              description: 'The description of the basic layout goes here.',
+            ),
+            ContainerWidget(
+              title: 'Basic Layout',
+              description: 'The description of the basic layout goes here.',
+            ),
+            ContainerWidget(
+              title: 'Basic Layout',
+              description: 'The description of the basic layout goes here.',
+            ),
+          ],
+        ),
       ),
-    ),);
+    );
   }
 }

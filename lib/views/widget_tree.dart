@@ -17,7 +17,7 @@ class WidgetTree extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Mr.DCT'),
+        title: Text('DCT Lab'),
         actions: [
           // Theme Icon
           IconButton(
