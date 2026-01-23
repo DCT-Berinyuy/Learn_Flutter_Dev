@@ -7,11 +7,11 @@ class KConstants {
 class KTextStyle {
   static const TextStyle titleTeeText = TextStyle(
     fontSize: 16.0,
-    color: Colors.lightGreenAccent,
+    color: Colors.green,
     fontWeight: FontWeight.bold,
   ); 
   static const TextStyle descriptionText = TextStyle(
     fontSize: 14.0,
-    color: Colors.white70,
+    color: Colors.blueGrey,
   );
 }

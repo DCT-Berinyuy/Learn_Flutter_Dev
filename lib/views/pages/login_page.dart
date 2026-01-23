@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/views/widget_tree.dart';
-import 'package:flutter_app/widgets/hero_widget.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key, required this.title});
@@ -26,6 +26,7 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(child: Text("Login"))),
@@ -36,8 +37,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                HeroWidget(title: widget.title),
-                SizedBox(height: 20.0),
+                Lottie.asset('assets/lotties/code dark.json', height: 300.0),
                 TextField(
                   controller: controllerEmail,
                   decoration: InputDecoration(
@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
                 ),
                 SizedBox(height: 20.0),
-                ElevatedButton(
+                FilledButton(
                   onPressed: () {
                     onLoginPressed();
                   },

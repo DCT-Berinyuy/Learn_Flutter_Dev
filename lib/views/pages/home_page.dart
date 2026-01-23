@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         children: [
           HeroWidget(title: 'Mr.DCT',),
           Padding(padding: EdgeInsets.symmetric(vertical: 20.0),
-          child: Container(
+          child: SizedBox(
             width: double.infinity,
             child: Card(
               child: Padding(
