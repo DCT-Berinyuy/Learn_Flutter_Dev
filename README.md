@@ -1,21 +1,113 @@
-# flutter_app
+# Flutter Learning Journey
 
-A journey on learning MobileApp Dev Android | iOS
+A comprehensive journey on learning Mobile App Development for Android and iOS using Flutter.
 
-## ScreenShots Preview
-![Settings Page](screenshot2.png)
-![Home Page](screenshot1.png)
+## 📱 Screenshots Preview
 
-## Getting Started
+<div align="center">
+  <img src="assets/images/screenshot1.png" width="30%" alt="Home Page"/>
+  <img src="assets/images/screenshot2.png" width="30%" alt="Settings Page"/>
+  <img src="assets/images/screenshot3.png" width="30%" alt="Onboarding"/>
+</div>
 
-This project is a starting point for a Flutter application.
+<div align="center">
+  <img src="assets/images/screenshot4.png" width="30%" alt="Login"/>
+  <img src="assets/images/screenshot5.png" width="30%" alt="Profile"/>
+  <img src="assets/images/screenshot6.png" width="30%" alt="Courses"/>
+</div>
 
-A few resources to get you started if this is your first Flutter project:
+<div align="center">
+  <img src="assets/images/screenshot7.png" width="30%" alt="Theme Switching"/>
+</div>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Learn_Flutter_Dev
+- ✅ Responsive UI for both Android and iOS
+- ✅ Light/Dark theme toggle with persistent settings
+- ✅ Modern navigation with bottom navigation bar
+- ✅ Lottie animations for enhanced user experience
+- ✅ Local storage using Shared Preferences
+- ✅ Clean architecture with organized components
+
+## 🛠️ Technologies Used
+
+- **Flutter SDK**: Cross-platform mobile development
+- **Dart**: Programming language
+- **Lottie**: Animated assets
+- **Shared Preferences**: Local data persistence
+- **HTTP**: Network requests
+
+## 📋 Getting Started
+
+### Prerequisites
+
+- Flutter SDK installed
+- Dart SDK installed
+- Android Studio/Xcode for device simulators
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Navigate to project directory:
+   ```bash
+   cd flutter_app
+   ```
+
+3. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+
+4. Run the application:
+   ```bash
+   flutter run
+   ```
+
+### Building for Production
+
+```bash
+flutter build apk      # Android APK
+flutter build ios      # iOS IPA
+flutter build web      # Web application
+```
+
+## 🏗️ Project Structure
+
+```
+lib/
+├── data/
+│   ├── constants.dart     # Constant values and text styles
+│   └── notifiers.dart     # ValueNotifiers for state management
+├── views/
+│   ├── pages/             # Individual page widgets
+│   └── widget_tree.dart   # Main app structure
+├── widgets/               # Reusable custom widgets
+└── main.dart              # Application entry point
+```
+
+## 🎨 Key Concepts Demonstrated
+
+- State management using ValueNotifier
+- Theme switching with persistent storage
+- Navigation patterns
+- Custom UI components
+- Asset management
+- Responsive layouts
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📚 Resources
+
+- [Flutter Documentation](https://docs.flutter.dev/)
+- [Dart Language Tour](https://dart.dev/language)
+- [Flutter Widget Catalog](https://docs.flutter.dev/ui/widgets)
