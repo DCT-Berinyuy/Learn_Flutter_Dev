@@ -13,8 +13,9 @@ class OnboardingPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: FractionallySizedBox(
-              widthFactor: 0.7,
+            child: LayoutBuilder(builder: (context, constraints)  {
+              return FractionallySizedBox(
+              widthFactor: constraints.maxWidth > 500 ? 0.5 : 1.0,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -46,9 +47,11 @@ class OnboardingPage extends StatelessWidget {
                   SizedBox(height: 50.0),
                 ],
               ),
-            ),
+            );
+            }
           ),
         ),
+      ),
       ),
     );
   }

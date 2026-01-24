@@ -124,3 +124,7 @@ const EdgeInsets.symmetric(vertical: 8.0)
 Creates a list with [length] positions and fills it with values created by calling [generator] for each index in the range 0 .. length - 1 in increasing order.
 ## AssetImage
 - Creates an object that fetches an image from an asset bundle.
+## FractionallySizeBox
+- Creates a widget that sizes its child to a fraction of the total available space.
+## LayoutBuilder
+- Creates a widget that defers its building until layout.

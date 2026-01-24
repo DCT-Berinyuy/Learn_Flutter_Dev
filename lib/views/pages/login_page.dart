@@ -34,8 +34,9 @@ class _LoginPageState extends State<LoginPage> {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: FractionallySizedBox(
-              widthFactor: 0.5,
+            child: LayoutBuilder(builder: (context, BoxConstraints constraints)  {
+              return FractionallySizedBox(
+              widthFactor: constraints.maxWidth > 500 ? 0.5 : 1.0,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -78,9 +79,11 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(height: 50.0),
                 ],
               ),
-            ),
+            );
+            },
           ),
         ),
+      ),
       ),
     );
   }
