@@ -1,72 +1,107 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/classes/activity_class.dart';
-import 'package:flutter_app/widgets/hero_widget.dart';
-import 'package:http/http.dart' as http;
+import '../../data/models/activity.dart';
+import '../../services/activity_service.dart';
 
-class CoursesPage extends StatefulWidget {
-  const CoursesPage({super.key});
+class ActivityScreen extends StatefulWidget {
+  const ActivityScreen({super.key});
 
   @override
-  State<CoursesPage> createState() => _CoursesPageState();
+  State<ActivityScreen> createState() => _ActivityScreenState();
 }
 
-class _CoursesPageState extends State<CoursesPage> {
+class _ActivityScreenState extends State<ActivityScreen> {
+  late Future<Activity> _activityFuture;
+  final _service = ActivityService();
+
   @override
   void initState() {
-    getData();
     super.initState();
+    _activityFuture = _service.fetchRandomActivity();
   }
 
-  Future getData() async {
-    var url = Uri.https('bored-api.appbrewery.com', '/random');
-
-    // Await the http get response, then decode the json-formatted response.
-    var response = await http.get(url);
-    if (response.statusCode == 200) {
-      // If the server did return a 200 OK response,
-      // then parse the JSON.
-      return Activity.fromJson(
-        jsonDecode(response.body) as Map<String, dynamic>,
-      );
-    } else {
-      // If the server did not return a 200 OK response,
-      // then throw an exception.
-      throw Exception('Failed to load album');
-    }
+  void _refresh() {
+    setState(() {
+      _activityFuture = _service.fetchRandomActivity();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Courses')),
-      body: FutureBuilder(
-        future: getData(),
-        builder: (context, AsyncSnapshot snapshot) {
-          Widget widget;
+      appBar: AppBar(
+        title: const Text('Random Activity'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _refresh,
+          )
+        ],
+      ),
+      body: FutureBuilder<Activity>(
+        future: _activityFuture,
+        builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            widget = Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
-          if (snapshot.hasData) {
-            Activity activity = snapshot.data;
-            widget = Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: SingleChildScrollView(
-                child: Column(children: [HeroWidget(title: activity.activity),
-                Text(activity.activity)]),
-              ),
-            );
-          } else {
-            widget = Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: SingleChildScrollView(
-                child: Column(children: [HeroWidget(title: 'Course Lab')]),
+
+          if (snapshot.hasError) {
+            return Center(
+              child: Text(
+                'Error: ${snapshot.error}',
+                style: const TextStyle(color: Colors.red),
               ),
             );
           }
-          return widget;
+
+          final activity = snapshot.data!;
+
+          return Padding(
+            padding: const EdgeInsets.all(16),
+            child: Card(
+              elevation: 4,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: ListView(
+                  children: [
+                    Text(
+                      activity.activity,
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                    const SizedBox(height: 12),
+                    _infoRow('Type', activity.type),
+                    _infoRow('Participants', activity.participants.toString()),
+                    _infoRow('Price', activity.price.toString()),
+                    _infoRow('Availability', activity.availability?.toString() ?? 'N/A'),
+                    _infoRow('Accessibility', activity.accessibility.toString()),
+                    _infoRow('Duration', activity.duration ?? 'N/A'),
+                    _infoRow(
+                      'Kid Friendly',
+                      activity.kidFriendly != null ? (activity.kidFriendly! ? 'Yes' : 'No') : 'N/A',
+                    ),
+                    const SizedBox(height: 12),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(activity.link),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
         },
+      ),
+    );
+  }
+
+  Widget _infoRow(String label, String value) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(label, style: const TextStyle(fontWeight: FontWeight.bold)),
+          Flexible(child: Text(value)),
+        ],
       ),
     );
   }

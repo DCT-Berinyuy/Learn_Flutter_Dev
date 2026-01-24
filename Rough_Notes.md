@@ -136,3 +136,5 @@ Creates a list with [length] positions and fills it with values created by calli
 - Creates a widget that controls how a child of a [Row], [Column], or [Flex] flexes.
 ## jsonDecode
 - Parses the string and returns the resulting Json object.
+## FutureBuilder
+- Creates a widget that builds itself based on the latest snapshot of interaction with a [Future].
