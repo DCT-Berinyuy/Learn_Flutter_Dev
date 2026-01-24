@@ -22,7 +22,9 @@ class HomePage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 5.0),
             HeroWidget(title: 'DCT Lab', nextPage: CoursesPage()),
+            SizedBox(height: 5.0),
             ...List.generate(items.length, (index) {
               return ContainerWidget(
                 title: items.elementAt(index),

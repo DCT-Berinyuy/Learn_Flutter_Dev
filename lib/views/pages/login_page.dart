@@ -34,47 +34,50 @@ class _LoginPageState extends State<LoginPage> {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Lottie.asset('assets/lotties/code dark.json', height: 300.0),
-                TextField(
-                  controller: controllerEmail,
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0),
+            child: FractionallySizedBox(
+              widthFactor: 0.5,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Lottie.asset('assets/lotties/code dark.json', height: 300.0),
+                  TextField(
+                    controller: controllerEmail,
+                    decoration: InputDecoration(
+                      hintText: 'Email',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                     ),
+                    onEditingComplete: () {
+                      setState(() {}); // Refresh the UI
+                    },
                   ),
-                  onEditingComplete: () {
-                    setState(() {}); // Refresh the UI
-                  },
-                ),
-                SizedBox(height: 10.0),
-                TextField(
-                  controller: controllerPassword,
-                  decoration: InputDecoration(
-                    hintText: 'Password',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0),
+                  SizedBox(height: 10.0),
+                  TextField(
+                    controller: controllerPassword,
+                    decoration: InputDecoration(
+                      hintText: 'Password',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
                     ),
+                    onEditingComplete: () {
+                      setState(() {}); // Refresh the UI
+                    },
                   ),
-                  onEditingComplete: () {
-                    setState(() {}); // Refresh the UI
-                  },
-                ),
-                SizedBox(height: 20.0),
-                FilledButton(
-                  onPressed: () {
-                    onLoginPressed();
-                  },
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: Size(double.infinity, 50),
+                  SizedBox(height: 20.0),
+                  FilledButton(
+                    onPressed: () {
+                      onLoginPressed();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(double.infinity, 50),
+                    ),
+                    child: Text(widget.title),
                   ),
-                  child: Text(widget.title),
-                ),
-                SizedBox(height: 50.0),
-              ],
+                  SizedBox(height: 50.0),
+                ],
+              ),
             ),
           ),
         ),
