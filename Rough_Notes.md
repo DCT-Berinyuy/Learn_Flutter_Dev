@@ -134,3 +134,5 @@ Creates a list with [length] positions and fills it with values created by calli
 - Creates a widget that expands a child of a [Row], [Column], or [Flex] so that the child fills the available space along the flex widget's main axis.
 ## Flexible
 - Creates a widget that controls how a child of a [Row], [Column], or [Flex] flexes.
+## jsonDecode
+- Parses the string and returns the resulting Json object.
