@@ -108,6 +108,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📚 Resources
 
+- [YouTube](https://youtu.be/3kaGC_DrUnw?si=Uolf6SYmj4fTcGbk)
 - [Flutter Documentation](https://docs.flutter.dev/)
 - [Dart Language Tour](https://dart.dev/language)
 - [Flutter Widget Catalog](https://docs.flutter.dev/ui/widgets)
