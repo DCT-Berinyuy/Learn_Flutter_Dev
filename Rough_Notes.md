@@ -128,3 +128,5 @@ Creates a list with [length] positions and fills it with values created by calli
 - Creates a widget that sizes its child to a fraction of the total available space.
 ## LayoutBuilder
 - Creates a widget that defers its building until layout.
+## AspectRatio
+- Creates a widget with a specific aspect ratio.
